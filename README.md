@@ -73,3 +73,10 @@ Pro ships; until then it prints where Pro will live.
 Source-available once shipped. The MIT core is unaffected and always free.
 
 © Jordan Newell
+
+
+<p align="right">
+  <a href="https://jordannewell.com" title="Built by Jordan Newell">
+    <img src="assets/newell-badge.png" alt="Built by Jordan Newell" width="48" height="48">
+  </a>
+</p>
