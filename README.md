@@ -80,3 +80,12 @@ Source-available once shipped. The MIT core is unaffected and always free.
     <img src="assets/newell-badge.png" alt="Built by Jordan Newell" width="48" height="48">
   </a>
 </p>
+
+## Contributing
+
+Pro is source-available; development happens in private until ship. Bug
+reports via security@jordannewell.com or GitHub issues once public.
+
+## License
+
+MIT — see [LICENSE](./LICENSE). Source-available once shipped.
