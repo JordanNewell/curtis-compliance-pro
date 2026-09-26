@@ -1,78 +1,60 @@
 # Security Policy
 
-## Supported Versions
-
-| Version | Supported          |
-|---------|--------------------|
-| latest  | :white_check_mark: |
-
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in this project, please report it responsibly.
+**Do not open a public GitHub issue for a security vulnerability.**
 
-### How to Report
+Report vulnerabilities privately to **<security@jordannewell.com>**.
+(Placeholder address — Jordan will replace with a dedicated security inbox.)
 
-Send your report to: **[security@jordannewell.com](mailto:security@jordannewell.com)**
-
-Please include as much detail as possible:
-
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Any proof-of-concept code (if applicable and kept minimal)
-
-### Encryption
-
-You can encrypt sensitive reports using this GPG key:
+If you have a PGP key, encrypt the report. The fingerprint of the project's
+reporting key will be published here once Jordan generates it:
 
 ```
-67567DC5E7C5353F85F2AF0DAC05D3F3E0EFA32A
+PGP fingerprint:  TBD (to be published)
+PGP public key:   TBD (to be published)
 ```
 
-### Response Timeline
+Until the PGP key is published, plaintext email is fine — but please prefer
+it over GitHub issues either way.
 
-- **Acknowledgment**: Within 72 hours of receiving your report
-- **Initial assessment**: Within 7 days
-- **Resolution**: We'll work with you on a timeline based on severity
+Please include, where possible:
 
-### What to Expect
+- A description of the issue and its impact.
+- The smallest reproducer you can manage (a failing test is ideal).
+- Affected versions (or the commit SHA you tested against).
+- Any mitigations you've already tried.
 
-- Confirmation of receipt within 72 hours
-- Regular updates on our progress
-- Credit in the security advisory (if desired)
-- Coordination on disclosure timing
+## Response SLA
+
+- **Acknowledgement:** within **48 hours** (typically same business day).
+- **Initial assessment + severity rating:** within **5 business days**.
+- **Fix or mitigation timeline** depends on severity:
+  - *Critical* (RCE, key compromise, auth bypass): patch or mitigation
+    within 7 days of confirmation; coordinated disclosure afterwards.
+  - *High*: patch within 30 days.
+  - *Medium / Low:* next minor release.
+
+We will keep you informed at each step and credit you in the release notes
+unless you'd prefer to remain anonymous.
 
 ## Scope
 
-This security policy covers:
+**In scope:**
 
-- The curtis-compliance-pro codebase
-- The Curtis Compliance Pro GitHub App (when live)
-- API endpoints for license validation (when deployed)
-- Multi-repo audit rollup functionality (when deployed)
+- The `curtis-compliance-pro` application, its API surface, and data handling layers.
+- Anything that could leak or tamper with compliance data.
 
-### Out of Scope
+**Out of scope:**
 
-The following are explicitly out of scope:
+- Vulnerabilities in third-party dependencies. Report those upstream.
+- Attacks requiring a compromised maintainer, a compromised signing key, or
+  physical access to the reporter's machine.
+- Reports from automated scanners without a working reproducer.
 
-- Issues in third-party dependencies (we'll follow responsible disclosure with those projects)
-- Issues requiring improbable/unlikely user actions
-- Issues without demonstrated security impact
-- Social engineering attacks against users
+## Disclosure policy
 
-## Preferred Languages
-
-We prefer reports in English. If you need to report in another language, please let us know and we'll do our best to accommodate.
-
-## Legal Safe Harbor
-
-We commit to not pursue legal action against security researchers who:
-
-- Follow this disclosure policy
-- Act in good faith
-- Do not access or modify data beyond what's necessary to demonstrate the vulnerability
-- Provide us with reasonable time to fix the issue before public disclosure
-
----
-
-Thank you for helping keep Curtis Compliance Pro secure.
+We follow **coordinated disclosure**. Once a fix is available we'll publish a
+GitHub Security Advisory, request a CVE if appropriate, cut a patch release,
+and credit the reporter in the changelog. We will not publish details of
+unpatched critical issues.
