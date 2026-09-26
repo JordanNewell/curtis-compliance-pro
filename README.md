@@ -80,3 +80,6 @@ Source-available once shipped. The MIT core is unaffected and always free.
     <img src="assets/newell-badge.png" alt="Built by Jordan Newell" width="48" height="48">
   </a>
 </p>
+## Security
+
+Report vulnerabilities privately via [SECURITY.md](SECURITY.md) — do not open public issues for security reports.
